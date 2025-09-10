@@ -44,14 +44,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 <body>
     <h1>Calculadora Simples</h1>
     <form method="post">
-        <label>Número 1: <input type="number" name="num1" step="any" valeu="<?php echo htmlspecialchars($num1); ?>" required></label><br>
-        <label>Número 2: <input type="number" name="num2" step="any" valeu="<?php echo htmlspecialchars($num2); ?>" required></label><br>
+        <label>Número 1: <input type="number" name="num1" step="any" value="<?php echo htmlspecialchars($num1); ?>" required></label><br>
+        <label>Número 2: <input type="number" name="num2" step="any" value="<?php echo htmlspecialchars($num2); ?>" required></label><br>
         <label>Operação:
             <select name="operacao" required>
                 <option value="" >Selecione</option>
                 <option value="soma" <?php echo $operacao === 'soma' ? 'selected' : ''; ?>>Soma</option>
                 <option value="subtracao" <?php echo $operacao === 'subtracao' ? 'selected' : ''; ?>>Subtração</option>
-                <option value="multiplicacao" <?php $operacao === 'multiplicacao' ? 'selected' : ''; ?>>Multiplicação</option>
+                <option value="multiplicacao" <?php echo $operacao === 'multiplicacao' ? 'selected' : ''; ?>>Multiplicação</option>
                 <option value="divisao" <?php echo $operacao === 'divisao' ? 'selected' : ''; ?>>Divisão</option>
             </select>
         </label><br>
